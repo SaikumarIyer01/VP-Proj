@@ -94,8 +94,6 @@ namespace Attendance_System
             }
             else
             {
-                //create a record for each student
-                //Get the class students list
                 StudentsTBLTableAdapter students_adapter = new StudentsTBLTableAdapter();
 
                 DataTable dt_Students = students_adapter.GetDataByCLassID((int)metroComboBox1.SelectedValue);
@@ -204,6 +202,28 @@ namespace Attendance_System
         {
             RegisterFrm reg = new RegisterFrm();
             reg.ShowDialog();
+        }
+
+        private void metroButton6_Click_1(object sender, EventArgs e)
+        {
+            RegisterFrm reg = new RegisterFrm();
+            reg.ShowDialog();
+        }
+
+        private void metroButton3_Click_1(object sender, EventArgs e)
+        {
+            FrmAddClass addclass = new FrmAddClass();
+            addclass.UserID = this.UserID;
+            addclass.ShowDialog();
+        }
+
+        private void metroButton4_Click_1(object sender, EventArgs e)
+        {
+            StudentsFrm students = new StudentsFrm();
+            students.ClassName = metroComboBox1.Text;
+            students.ClassID = (int)metroComboBox1.SelectedValue;
+
+            students.ShowDialog();
         }
     }
 }
