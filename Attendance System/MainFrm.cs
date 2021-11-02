@@ -52,7 +52,9 @@ namespace Attendance_System
                     this.classesTBLTableAdapter.Fill(this.dataSet1.ClassesTBL);
                     classesTBLBindingSource.Filter = "UserID = '" + UserID.ToString() + "'";
 
+
                 }
+
             }
 
 
@@ -156,7 +158,10 @@ namespace Attendance_System
 
         private void metroButton5_Click(object sender, EventArgs e)
         {
+            //clear data from list
+  
             // get students
+
             StudentsTBLTableAdapter students_adapter = new StudentsTBLTableAdapter();
             DataTable dt_Students = students_adapter.GetDataByCLassID((int)metroComboBox2.SelectedValue);
 
@@ -182,10 +187,11 @@ namespace Attendance_System
 
                 
                 //Execuse
-                E = (int)ada.GetDataByReport(dateTimePicker2.Value.Month, row[1].ToString(), "execused").Rows[0][6];
+                E = (int)ada.GetDataByReport(dateTimePicker2.Value.Month, row[1].ToString(), "excused").Rows[0][6];
 
 
                 ListViewItem litem = new ListViewItem();
+                
                 litem.Text = row[1].ToString();
                 litem.SubItems.Add(p.ToString());
                 litem.SubItems.Add(A.ToString());
@@ -224,6 +230,12 @@ namespace Attendance_System
             students.ClassID = (int)metroComboBox1.SelectedValue;
 
             students.ShowDialog();
+        }
+
+        private void metroButton7_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+
         }
     }
 }

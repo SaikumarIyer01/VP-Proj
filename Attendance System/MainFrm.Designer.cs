@@ -38,7 +38,6 @@
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.StudentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.attendanceREcordsTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -48,7 +47,12 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.classesTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.metroButton6 = new MetroFramework.Controls.MetroButton();
+            this.metroButton4 = new MetroFramework.Controls.MetroButton();
+            this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.metroButton7 = new MetroFramework.Controls.MetroButton();
             this.metroButton5 = new MetroFramework.Controls.MetroButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -60,10 +64,6 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
-            this.metroButton6 = new MetroFramework.Controls.MetroButton();
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.classesTBLTableAdapter = new Attendance_System.DataSet1TableAdapters.ClassesTBLTableAdapter();
             this.attendanceREcordsTBLTableAdapter = new Attendance_System.DataSet1TableAdapters.AttendanceREcordsTBLTableAdapter();
             this.metroTabControl1.SuspendLayout();
@@ -73,20 +73,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.attendanceREcordsTBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classesTBLBindingSource)).BeginInit();
-            this.metroTabPage2.SuspendLayout();
             this.metroTabPage3.SuspendLayout();
+            this.metroTabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.metroTabPage1);
-            this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Controls.Add(this.metroTabPage3);
+            this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(27, 74);
             this.metroTabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 2;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(777, 652);
             this.metroTabControl1.TabIndex = 0;
             // 
@@ -172,7 +172,6 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.StudentID,
             this.studentNameDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.attendanceREcordsTBLBindingSource;
@@ -183,29 +182,21 @@
             this.dataGridView1.Size = new System.Drawing.Size(532, 473);
             this.dataGridView1.TabIndex = 6;
             // 
-            // StudentID
-            // 
-            this.StudentID.DataPropertyName = "StudentID";
-            this.StudentID.HeaderText = "StudentID";
-            this.StudentID.MinimumWidth = 6;
-            this.StudentID.Name = "StudentID";
-            this.StudentID.Width = 80;
-            // 
             // studentNameDataGridViewTextBoxColumn
             // 
             this.studentNameDataGridViewTextBoxColumn.DataPropertyName = "StudentName";
             this.studentNameDataGridViewTextBoxColumn.HeaderText = "StudentName";
-            this.studentNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.studentNameDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.studentNameDataGridViewTextBoxColumn.Name = "studentNameDataGridViewTextBoxColumn";
-            this.studentNameDataGridViewTextBoxColumn.Width = 80;
+            this.studentNameDataGridViewTextBoxColumn.Width = 150;
             // 
             // statusDataGridViewTextBoxColumn
             // 
             this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
             this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.statusDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.Width = 80;
+            this.statusDataGridViewTextBoxColumn.Width = 150;
             // 
             // attendanceREcordsTBLBindingSource
             // 
@@ -266,8 +257,53 @@
             this.classesTBLBindingSource.DataMember = "ClassesTBL";
             this.classesTBLBindingSource.DataSource = this.dataSet1;
             // 
+            // metroTabPage3
+            // 
+            this.metroTabPage3.BackColor = System.Drawing.Color.Transparent;
+            this.metroTabPage3.Controls.Add(this.metroButton6);
+            this.metroTabPage3.Controls.Add(this.metroButton4);
+            this.metroTabPage3.Controls.Add(this.metroButton3);
+            this.metroTabPage3.HorizontalScrollbarBarColor = true;
+            this.metroTabPage3.Location = new System.Drawing.Point(4, 39);
+            this.metroTabPage3.Name = "metroTabPage3";
+            this.metroTabPage3.Size = new System.Drawing.Size(769, 609);
+            this.metroTabPage3.TabIndex = 2;
+            this.metroTabPage3.Text = "Admin";
+            this.metroTabPage3.VerticalScrollbarBarColor = true;
+            // 
+            // metroButton6
+            // 
+            this.metroButton6.Location = new System.Drawing.Point(260, 89);
+            this.metroButton6.Margin = new System.Windows.Forms.Padding(4);
+            this.metroButton6.Name = "metroButton6";
+            this.metroButton6.Size = new System.Drawing.Size(252, 78);
+            this.metroButton6.TabIndex = 16;
+            this.metroButton6.Text = "Add Teacher";
+            this.metroButton6.Click += new System.EventHandler(this.metroButton6_Click_1);
+            // 
+            // metroButton4
+            // 
+            this.metroButton4.Location = new System.Drawing.Point(260, 354);
+            this.metroButton4.Margin = new System.Windows.Forms.Padding(4);
+            this.metroButton4.Name = "metroButton4";
+            this.metroButton4.Size = new System.Drawing.Size(252, 78);
+            this.metroButton4.TabIndex = 15;
+            this.metroButton4.Text = "Add Students";
+            this.metroButton4.Click += new System.EventHandler(this.metroButton4_Click_1);
+            // 
+            // metroButton3
+            // 
+            this.metroButton3.Location = new System.Drawing.Point(260, 212);
+            this.metroButton3.Margin = new System.Windows.Forms.Padding(4);
+            this.metroButton3.Name = "metroButton3";
+            this.metroButton3.Size = new System.Drawing.Size(252, 78);
+            this.metroButton3.TabIndex = 14;
+            this.metroButton3.Text = "Add Class";
+            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click_1);
+            // 
             // metroTabPage2
             // 
+            this.metroTabPage2.Controls.Add(this.metroButton7);
             this.metroTabPage2.Controls.Add(this.metroButton5);
             this.metroTabPage2.Controls.Add(this.label3);
             this.metroTabPage2.Controls.Add(this.label4);
@@ -285,9 +321,19 @@
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarSize = 13;
             // 
+            // metroButton7
+            // 
+            this.metroButton7.Location = new System.Drawing.Point(619, 51);
+            this.metroButton7.Margin = new System.Windows.Forms.Padding(4);
+            this.metroButton7.Name = "metroButton7";
+            this.metroButton7.Size = new System.Drawing.Size(146, 37);
+            this.metroButton7.TabIndex = 18;
+            this.metroButton7.Text = "Clear";
+            this.metroButton7.Click += new System.EventHandler(this.metroButton7_Click);
+            // 
             // metroButton5
             // 
-            this.metroButton5.Location = new System.Drawing.Point(619, 14);
+            this.metroButton5.Location = new System.Drawing.Point(619, 4);
             this.metroButton5.Margin = new System.Windows.Forms.Padding(4);
             this.metroButton5.Name = "metroButton5";
             this.metroButton5.Size = new System.Drawing.Size(146, 37);
@@ -381,49 +427,6 @@
             this.columnHeader5.Text = "Excused";
             this.columnHeader5.Width = 131;
             // 
-            // metroTabPage3
-            // 
-            this.metroTabPage3.Controls.Add(this.metroButton6);
-            this.metroTabPage3.Controls.Add(this.metroButton4);
-            this.metroTabPage3.Controls.Add(this.metroButton3);
-            this.metroTabPage3.HorizontalScrollbarBarColor = true;
-            this.metroTabPage3.Location = new System.Drawing.Point(4, 39);
-            this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(769, 609);
-            this.metroTabPage3.TabIndex = 2;
-            this.metroTabPage3.Text = "Admin";
-            this.metroTabPage3.VerticalScrollbarBarColor = true;
-            // 
-            // metroButton6
-            // 
-            this.metroButton6.Location = new System.Drawing.Point(260, 89);
-            this.metroButton6.Margin = new System.Windows.Forms.Padding(4);
-            this.metroButton6.Name = "metroButton6";
-            this.metroButton6.Size = new System.Drawing.Size(252, 78);
-            this.metroButton6.TabIndex = 16;
-            this.metroButton6.Text = "Add Teacher";
-            this.metroButton6.Click += new System.EventHandler(this.metroButton6_Click_1);
-            // 
-            // metroButton4
-            // 
-            this.metroButton4.Location = new System.Drawing.Point(260, 354);
-            this.metroButton4.Margin = new System.Windows.Forms.Padding(4);
-            this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(252, 78);
-            this.metroButton4.TabIndex = 15;
-            this.metroButton4.Text = "Add Students";
-            this.metroButton4.Click += new System.EventHandler(this.metroButton4_Click_1);
-            // 
-            // metroButton3
-            // 
-            this.metroButton3.Location = new System.Drawing.Point(260, 212);
-            this.metroButton3.Margin = new System.Windows.Forms.Padding(4);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(252, 78);
-            this.metroButton3.TabIndex = 14;
-            this.metroButton3.Text = "Add Class";
-            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click_1);
-            // 
             // classesTBLTableAdapter
             // 
             this.classesTBLTableAdapter.ClearBeforeFill = true;
@@ -436,6 +439,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Attendance_System.Properties.Resources.ARIIA_2020_SRMIST_2;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(831, 751);
             this.Controls.Add(this.metroTabControl1);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -454,9 +459,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.attendanceREcordsTBLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.classesTBLBindingSource)).EndInit();
+            this.metroTabPage3.ResumeLayout(false);
             this.metroTabPage2.ResumeLayout(false);
             this.metroTabPage2.PerformLayout();
-            this.metroTabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -497,9 +502,9 @@
         private MetroFramework.Controls.MetroButton metroButton6;
         private MetroFramework.Controls.MetroButton metroButton4;
         private MetroFramework.Controls.MetroButton metroButton3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentID;
         private System.Windows.Forms.DataGridViewTextBoxColumn studentNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private MetroFramework.Controls.MetroButton metroButton7;
     }
 }
 

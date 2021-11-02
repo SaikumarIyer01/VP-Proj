@@ -38,6 +38,10 @@
             // 
             // metroTextBoxUser
             // 
+            this.metroTextBoxUser.BackColor = System.Drawing.Color.White;
+            this.metroTextBoxUser.CustomBackground = true;
+            this.metroTextBoxUser.CustomForeColor = true;
+            this.metroTextBoxUser.ForeColor = System.Drawing.Color.Navy;
             this.metroTextBoxUser.Location = new System.Drawing.Point(42, 264);
             this.metroTextBoxUser.Margin = new System.Windows.Forms.Padding(4);
             this.metroTextBoxUser.Name = "metroTextBoxUser";
@@ -59,14 +63,18 @@
             this.metroButtonLogin.Margin = new System.Windows.Forms.Padding(4);
             this.metroButtonLogin.Name = "metroButtonLogin";
             this.metroButtonLogin.Size = new System.Drawing.Size(121, 37);
+            this.metroButtonLogin.Style = MetroFramework.MetroColorStyle.Yellow;
             this.metroButtonLogin.TabIndex = 5;
             this.metroButtonLogin.Text = "Login";
+            this.metroButtonLogin.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroButtonLogin.Click += new System.EventHandler(this.metroButtonLogin_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(105, 74);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(157, 62);
@@ -78,20 +86,24 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(37, 231);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 29);
+            this.label3.Size = new System.Drawing.Size(124, 29);
             this.label3.TabIndex = 8;
             this.label3.Text = "Username";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(37, 310);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 29);
+            this.label2.Size = new System.Drawing.Size(120, 29);
             this.label2.TabIndex = 8;
             this.label2.Text = "Password";
             // 
@@ -99,7 +111,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackgroundImage = global::Attendance_System.Properties.Resources.Screenshot_2021_11_03_012618;
             this.ClientSize = new System.Drawing.Size(385, 489);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
@@ -107,6 +120,7 @@
             this.Controls.Add(this.metroButtonLogin);
             this.Controls.Add(this.metroTextBoxPass);
             this.Controls.Add(this.metroTextBoxUser);
+            this.ForeColor = System.Drawing.Color.BlueViolet;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginFrm";
