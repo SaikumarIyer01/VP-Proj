@@ -237,5 +237,10 @@ namespace Attendance_System
             listView1.Items.Clear();
 
         }
+
+        private void metroTabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -87,8 +87,9 @@
             this.metroTabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 1;
-            this.metroTabControl1.Size = new System.Drawing.Size(777, 652);
+            this.metroTabControl1.Size = new System.Drawing.Size(808, 565);
             this.metroTabControl1.TabIndex = 0;
+            this.metroTabControl1.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
             // metroTabPage1
             // 
@@ -106,7 +107,7 @@
             this.metroTabPage1.Location = new System.Drawing.Point(4, 39);
             this.metroTabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(769, 609);
+            this.metroTabPage1.Size = new System.Drawing.Size(800, 522);
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "Attendance";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
@@ -128,10 +129,10 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.statLblUser});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 583);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 496);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(769, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(800, 26);
             this.statusStrip1.TabIndex = 11;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -259,17 +260,20 @@
             // 
             // metroTabPage3
             // 
-            this.metroTabPage3.BackColor = System.Drawing.Color.Transparent;
+            this.metroTabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.metroTabPage3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.metroTabPage3.Controls.Add(this.metroButton6);
             this.metroTabPage3.Controls.Add(this.metroButton4);
             this.metroTabPage3.Controls.Add(this.metroButton3);
             this.metroTabPage3.HorizontalScrollbarBarColor = true;
             this.metroTabPage3.Location = new System.Drawing.Point(4, 39);
             this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(769, 609);
+            this.metroTabPage3.Size = new System.Drawing.Size(800, 522);
+            this.metroTabPage3.Style = MetroFramework.MetroColorStyle.Green;
             this.metroTabPage3.TabIndex = 2;
             this.metroTabPage3.Text = "Admin";
             this.metroTabPage3.VerticalScrollbarBarColor = true;
+            this.metroTabPage3.Click += new System.EventHandler(this.metroTabPage3_Click);
             // 
             // metroButton6
             // 
@@ -315,7 +319,7 @@
             this.metroTabPage2.Location = new System.Drawing.Point(4, 39);
             this.metroTabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(769, 609);
+            this.metroTabPage2.Size = new System.Drawing.Size(800, 522);
             this.metroTabPage2.TabIndex = 1;
             this.metroTabPage2.Text = "Reports";
             this.metroTabPage2.VerticalScrollbarBarColor = true;
@@ -326,7 +330,7 @@
             this.metroButton7.Location = new System.Drawing.Point(619, 51);
             this.metroButton7.Margin = new System.Windows.Forms.Padding(4);
             this.metroButton7.Name = "metroButton7";
-            this.metroButton7.Size = new System.Drawing.Size(146, 37);
+            this.metroButton7.Size = new System.Drawing.Size(122, 46);
             this.metroButton7.TabIndex = 18;
             this.metroButton7.Text = "Clear";
             this.metroButton7.Click += new System.EventHandler(this.metroButton7_Click);
@@ -439,9 +443,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Attendance_System.Properties.Resources.ARIIA_2020_SRMIST_2;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(831, 751);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(862, 664);
             this.Controls.Add(this.metroTabControl1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainFrm";
